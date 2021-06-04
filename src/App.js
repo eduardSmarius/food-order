@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useContext } from 'react';
+import NavBar from './components/navBar/NavBar';
+import Header from './components/header/Header';
+import FoodMenu from './components/foodMenu/FoodMenu';
+import CartContext from './components/context/cartContext';
+import Modal from './components/Modal/Modal';
 
-function App() {
+const App = () => {
+  const ctx = useContext(CartContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <NavBar />
+      <Header />
+      <FoodMenu />
+      {ctx.cartVisibility && <Modal />}
+    </Fragment>
   );
-}
+};
 
 export default App;

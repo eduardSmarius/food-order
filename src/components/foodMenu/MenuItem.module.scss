@@ -1,0 +1,49 @@
+@import '../../utils/variables.scss';
+
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+
+  &:first-child {
+    color: red;
+  }
+}
+
+.addToCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount {
+  label {
+    font-family: $first-font;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  input {
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 3.5rem;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    text-align: center;
+  }
+}
+
+.button {
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.price {
+  color: $first-color;
+}

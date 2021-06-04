@@ -1,0 +1,11 @@
+@import '../utils/variables.scss';
+
+.button {
+  background-color: $first-color;
+  color: $second-color;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  vertical-align: middle;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+@import '../../utils/variables.scss';
+
+.foodMenu {
+  font-size: 2rem;
+  color: $third-color;
+  padding: 2rem;
+
+  .menuTitle {
+    text-align: center;
+    padding-bottom: 1rem;
+    color: $third-color;
+  }
+}
+
+.card {
+  margin: auto;
+  width: 60vw;
+  margin-top: 5rem;
+  background-color: $second-color;
+  margin-top: 9rem;
+  margin-bottom: 5rem;
+}

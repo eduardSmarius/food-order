@@ -1,0 +1,39 @@
+@import '../../utils/variables.scss';
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+  background-color: $first-color;
+  font-family: $first-font;
+}
+
+.navCart {
+  font-size: 1.3rem;
+  background-color: $third-color;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  .text {
+    padding: 0 0.7rem;
+  }
+
+  .amount {
+    background-color: $first-color;
+    padding: 0.2rem 1rem;
+    border-radius: 2rem;
+  }
+}
+
+nav h1 {
+  font-size: 1.7rem;
+}

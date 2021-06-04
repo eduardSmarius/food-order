@@ -1,0 +1,70 @@
+@import '../../utils/variables.scss';
+
+.cartOverlay {
+  position: fixed;
+  z-index: 3;
+  top: 30vh;
+  left: 29vw;
+  width: 40vw;
+  background-color: $second-color;
+  color: $third-color;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+
+  .cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid $first-color;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+    color: $first-color;
+  }
+
+  .amount {
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: 3rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.5rem;
+  }
+
+  .modify {
+    border: 1px solid $first-color;
+    color: $first-color;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 0.3rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .cartTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    font-size: 1.3rem;
+  }
+
+  .cartSubmit {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .close {
+    margin-right: 1rem;
+    background-color: $second-color;
+    color: $first-color;
+    border: 1px solid $first-color;
+  }
+}

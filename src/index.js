@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CartContextProvider } from './components/context/cartContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <CartContextProvider>
     <App />
-  </React.StrictMode>,
+  </CartContextProvider>,
   document.getElementById('root')
 );
 

@@ -1,0 +1,16 @@
+@import './utils/variables.scss';
+
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $third-color;
+  color: $second-color;
+  font-size: 62.5%;
+  line-height: 1.7rem;
+}
