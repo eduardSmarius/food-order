@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-import Card from '../../ui/Card';
+import Card from '../UI/Card';
 
 const Header = () => {
   return (

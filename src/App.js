@@ -1,18 +1,18 @@
 import { Fragment, useContext } from 'react';
-import NavBar from './components/navBar/NavBar';
+import NavBar from './components/header/NavBar';
 import Header from './components/header/Header';
 import FoodMenu from './components/foodMenu/FoodMenu';
-import CartContext from './components/context/cartContext';
-import Modal from './components/Modal/Modal';
+import CartContext from './context/cartContext';
+import Cart from './components/cart/Cart';
 
 const App = () => {
   const ctx = useContext(CartContext);
   return (
     <Fragment>
+      {ctx.cartVisibility && <Cart />}
       <NavBar />
       <Header />
       <FoodMenu />
-      {ctx.cartVisibility && <Modal />}
     </Fragment>
   );
 };

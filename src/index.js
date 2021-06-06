@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { CartContextProvider } from './components/context/cartContext';
+import { CartContextProvider } from './context/cartContext';
 
 ReactDOM.render(
   <CartContextProvider>

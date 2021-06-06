@@ -1,4 +1,4 @@
-@import '../../utils/variables.scss';
+@import '../../assets/variables.scss';
 
 nav {
   position: fixed;
@@ -36,4 +36,26 @@ nav {
 
 nav h1 {
   font-size: 1.7rem;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.25);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

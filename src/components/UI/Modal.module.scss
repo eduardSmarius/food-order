@@ -1,4 +1,4 @@
-@import '../../utils/variables.scss';
+@import '../../assets/variables.scss';
 
 .backdrop {
   position: fixed;
@@ -8,4 +8,12 @@
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalOverlay {
+  position: fixed;
+  z-index: 3;
+  top: 30vh;
+  left: 29vw;
+  width: 40vw;
 }

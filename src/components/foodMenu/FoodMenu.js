@@ -1,14 +1,14 @@
 import styles from './FoodMenu.module.scss';
-import Card from '../../ui/Card';
-import MenuItem from './MenuItem';
-import { menuItems } from '../../utils/Menu';
+import Card from '../UI/Card';
+import Meal from './Meal';
+import { meals } from '../../assets/Menu';
 
 const FoodMenu = () => {
   return (
     <Card className={`${styles.card} ${styles.foodMenu}`}>
       <h3 className={styles.menuTitle}>Menu</h3>
-      {menuItems.map((item) => (
-        <MenuItem item={item} key={item.id} />
+      {meals.map((meal) => (
+        <Meal meal={meal} key={meal.id} />
       ))}
     </Card>
   );

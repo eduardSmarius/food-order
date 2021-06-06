@@ -1,17 +1,12 @@
-@import '../../utils/variables.scss';
+@import '../../assets/variables.scss';
 
-.cartOverlay {
-  position: fixed;
-  z-index: 3;
-  top: 30vh;
-  left: 29vw;
-  width: 40vw;
+.cart {
   background-color: $second-color;
   color: $third-color;
   padding: 1.5rem;
   padding-top: 2.5rem;
 
-  .cartItem {
+  .cartMeal {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

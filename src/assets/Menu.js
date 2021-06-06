@@ -1,20 +1,20 @@
-export let menuItems = [
+export let meals = [
   {
     title: 'Sushi',
     description: 'fish & vegetables',
     price: 20,
-    id: Math.random(),
+    id: 'm1',
   },
   {
     title: 'Pizza',
     description: 'meat, cheese & sauces',
     price: 10,
-    id: Math.random(),
+    id: 'm2',
   },
   {
     title: 'Burger',
     description: 'steak & patatoes',
     price: 15,
-    id: Math.random(),
+    id: 'm3',
   },
 ];
