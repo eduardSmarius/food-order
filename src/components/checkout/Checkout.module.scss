@@ -1,0 +1,16 @@
+@import '../../assets/variables.scss';
+
+.card {
+  background-color: $second-color;
+  color: $third-color;
+  padding: 4rem 8rem;
+  padding-top: 2.5rem;
+
+  .checkout {
+    text-align: center;
+    .title {
+      font-size: 1.8rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

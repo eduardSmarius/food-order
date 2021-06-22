@@ -13,7 +13,12 @@
 .modalOverlay {
   position: fixed;
   z-index: 3;
-  top: 30vh;
-  left: 29vw;
-  width: 40vw;
+  top: 15vh;
+  left: 24.5vw;
+  bottom: 0;
+  overflow: scroll;
+}
+
+.modalOverlay::-webkit-scrollbar {
+  display: none;
 }

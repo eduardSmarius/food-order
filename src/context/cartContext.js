@@ -55,6 +55,8 @@ const cartReducer = (state, action) => {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
     };
+  } else if (action.type === 'EMPTY') {
+    return defaultCartState;
   }
 
   return defaultCartState;
@@ -63,6 +65,7 @@ const cartReducer = (state, action) => {
 //////////// Main Context Component ////////
 export const CartContextProvider = (props) => {
   const [cartVisibility, setCartVisibility] = useState(false);
+  const [checkoutVisibility, setCheckoutVisibility] = useState(false);
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
     defaultCartState
@@ -76,6 +79,10 @@ export const CartContextProvider = (props) => {
     dispatchCartAction({ type: 'REMOVE', id: id });
   };
 
+  const emptyCart = () => {
+    dispatchCartAction({ type: 'EMPTY' });
+  };
+
   ///////// Show & hide cart modal ////////
   const showCart = () => {
     setCartVisibility(true);
@@ -85,18 +92,31 @@ export const CartContextProvider = (props) => {
     setCartVisibility(false);
   };
 
+  ////////// Show Checkout Menu ////////////
+
+  const showCheckout = () => {
+    hideCart();
+    setCheckoutVisibility(true);
+  };
+
+  const hideCheckout = () => {
+    setCheckoutVisibility(false);
+  };
+
   return (
     <CartContext.Provider
       value={{
         cartMeals: cartState.items,
-        cartVisibility: cartVisibility,
         cartTotalPrice: cartState.totalAmount,
         addMealsToCart: addMealsToCartHandler,
         removeMealsFromCart: removeMealsFromCartHandler,
-        // minusCartMeal: minusCartMeal,
-        // // plusCartMeal: plusCartMeal,
-        showCart: showCart,
-        hideCart: hideCart,
+        cartVisibility,
+        emptyCart,
+        showCart,
+        hideCart,
+        showCheckout,
+        hideCheckout,
+        checkoutVisibility,
       }}
     >
       {props.children}

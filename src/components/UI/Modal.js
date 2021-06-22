@@ -5,7 +5,12 @@ import CartContext from '../../context/cartContext';
 
 const Backdrop = () => {
   const ctx = useContext(CartContext);
-  return <div className={styles.backdrop} onClick={ctx.hideCart}></div>;
+  return (
+    <div
+      className={styles.backdrop}
+      onClick={(ctx.hideCart, ctx.hideCheckout)}
+    ></div>
+  );
 };
 
 const ModalOverlay = (props) => {

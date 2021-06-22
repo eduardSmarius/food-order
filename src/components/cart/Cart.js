@@ -40,7 +40,11 @@ const Cart = () => {
             value='Close'
             onClick={ctx.hideCart}
           />
-          <Button className={styles.order} value='Order' />
+          <Button
+            onClick={ctx.showCheckout}
+            className={styles.order}
+            value='Order'
+          />
         </div>
       </Card>
     </Modal>
